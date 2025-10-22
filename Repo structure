@@ -1,0 +1,17 @@
+facial-recognition-opencv-python/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+├── dataset/
+│ ├── person_name_1/
+│ │ ├── 1.jpg
+│ │ └── ...
+│ └── person_name_2/
+├── src/
+│ ├── capture_images.py # capture faces for a person
+│ ├── train.py # train LBPH model
+│ ├── recognize.py # run real-time recognition
+│ └── utils.py # helper functions
+└── models/
+└── lbph_model.xml
