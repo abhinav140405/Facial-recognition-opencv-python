@@ -17,13 +17,5 @@ def main(data_dir, model_path):
     with open(model_path + '.labels.pkl', 'wb') as f:
         pickle.dump(label_map, f)
     print(f'Trained model saved to {model_path}')
-# if __name__ == '__main__': # Removed argparse
-#     # import numpy as np # Removed import from here
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument('--data-dir', default='dataset', help='Dataset directory')
-#     parser.add_argument('--model', default='models/lbph_model.xml', help='Output model file')
-#     args = parser.parse_args()
-#     main(args.data_dir, args.model)
-
 # Direct call to main with default values
 main(data_dir='dataset', model_path='models/lbph_model.xml')
