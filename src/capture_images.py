@@ -2,11 +2,9 @@ import argparse
 import cv2
 import os
 # from utils import ensure_dir, detect_faces_gray # Removed import
-
 def main(name, output, num_samples=40):
     output_dir = os.path.join(output, name)
     ensure_dir(output_dir)
-
     cap = cv2.VideoCapture(0)
     count = 0
     print('Press q to quit. Capturing images...')
@@ -32,14 +30,4 @@ def main(name, output, num_samples=40):
     cap.release()
     # cv2.destroyAllWindows() # Removed cv2.destroyAllWindows
     print(f'Done. Saved {count} images to {output_dir}')
-
-# if __name__ == '__main__': # Removed argparse
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument('--name', required=True, help='Person name (folder)')
-#     parser.add_argument('--output', default='dataset', help='Dataset output dir')
-#     parser.add_argument('--num', type=int, default=40, help='Number of face samples')
-#     args = parser.parse_args()
-#     main(args.name, args.output, args.num)
-
-# Direct call to main with default values
 main(name='person_name', output='dataset', num_samples=40)
